@@ -60,7 +60,7 @@ class Nokogiri::XML::Text
       if ENTITIES.include?(word) || dict.check(word)
         word
       else
-        "<span class=\"misspelled\">#{word}</span>"
+        "<mark class=\"misspelled\">#{word}</mark>"
       end
     end
   end
