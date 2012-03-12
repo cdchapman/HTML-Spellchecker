@@ -12,6 +12,6 @@ Gem::Specification.new do |s|
   s.require_paths    = ["lib"]
   s.rubygems_version = %q{1.3.7}
   s.add_dependency "nokogiri", "~>1.4"
-  s.add_dependency "hunspell-ffi", "=0.1.3.alpha2"
+  s.add_dependency "hunspell-ffi", "~>0.1.3.alpha2"
   s.add_development_dependency "rspec", "~>2.4"
 end
