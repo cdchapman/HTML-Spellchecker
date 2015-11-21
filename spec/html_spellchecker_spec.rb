@@ -34,8 +34,8 @@ describe HTML_Spellchecker do
   end
 
   it "does not mangle spaces between 2 incorrect words" do
-    txt = "<p>xxx yyy zzz</p>"
-    expected = "<p>xxx yyy zzz</p>".gsub(/(\w{3})/, '<mark class="misspelled">\1</mark>')
+    txt = "<p>www yyy zzz</p>"
+    expected = "<p>www yyy zzz</p>".gsub(/(\w{3})/, '<mark class="misspelled">\1</mark>')
     checker.spellcheck(txt).should == expected
   end
 
@@ -46,7 +46,7 @@ describe HTML_Spellchecker do
 
   it "preserves accents" do
     txt = "<p>café caf&eacute;</p>"
-    HTML_Spellchecker.french.spellcheck(txt).should !~ /misspelled/
+    HTML_Spellchecker.french.spellcheck(txt).should_not =~ /misspelled/
   end
 
   it "does not split words with a quote" do
