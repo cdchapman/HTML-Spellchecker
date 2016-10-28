@@ -52,7 +52,7 @@ class Nokogiri::XML::Node
 end
 
 class Nokogiri::XML::Text
-  WORDS_REGEXP = RUBY_VERSION =~ /^1\.8/ ? /(&\w+;)|([\w']+)/ : /(&\p{Word}{2,3};)|([\p{Word}']+)/
+  WORDS_REGEXP = RUBY_VERSION =~ /^1\.8/ ? /(&\w+;)|([\w']+)/ : /(&\p{Word}{2,3};)|([\p{Word}['’]]+)/
   ENTITIES = ["&gt;", "&lt;", "&amp;"]
 
   def spellcheck(dict)
